@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="project0@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="project0">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="phpmyadmin"/>
+    <schema id="7" parent="1" name="runtest"/>
+    <schema id="8" parent="1" name="test"/>
+    <schema id="9" parent="1" name="dairy"/>
+    <schema id="10" parent="1" name="user"/>
+    <table id="11" parent="2" name="saleproductoffers"/>
+    <table id="12" parent="2" name="userinfo"/>
+    <column id="13" parent="11" name="offerNumber">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="14" parent="11" name="productImage">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="15" parent="11" name="productName">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="11" name="productDescription">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="11" name="productPrice">
+      <Position>5</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="11" name="productUploadDate">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="11" name="productUploadTime">
+      <Position>7</Position>
+      <DataType>time|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="11" name="productCategory">
+      <Position>8</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="11" name="productSubCategory">
+      <Position>9</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="22" parent="11" name="userName">
+      <Position>10</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="23" parent="11" name="offerNumber">
+      <ColNames>offerNumber</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="24" parent="11" name="userName">
+      <ColNames>userName</ColNames>
+    </index>
+    <key id="25" parent="11" name="PRIMARY">
+      <ColNames>offerNumber</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="26" parent="11" name="offerNumber">
+      <ColNames>offerNumber</ColNames>
+      <UnderlyingIndexName>offerNumber</UnderlyingIndexName>
+    </key>
+    <foreign-key id="27" parent="11" name="saleproductoffers_ibfk_1">
+      <ColNames>userName</ColNames>
+      <RefSchemaName>project0</RefSchemaName>
+      <RefTableName>userinfo</RefTableName>
+      <RefColNames>userName</RefColNames>
+      <OnUpdate>update</OnUpdate>
+      <OnDelete>set-null</OnDelete>
+    </foreign-key>
+    <column id="28" parent="12" name="userNumber">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="12" name="userName">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="12" name="passcode">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="12" name="firstName">
+      <Position>4</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="12" name="lastName">
+      <Position>5</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="12" name="phoneNumber">
+      <Position>6</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="12" name="email">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="35" parent="12" name="placeWithoutDivision">
+      <Position>8</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="12" name="division">
+      <Position>9</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="12" name="profilePicture">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="38" parent="12" name="email">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="39" parent="12" name="phoneNumber">
+      <ColNames>phoneNumber</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="40" parent="12" name="userName">
+      <ColNames>userName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="41" parent="12" name="userNumber">
+      <ColNames>userNumber</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="12" name="PRIMARY">
+      <ColNames>userName</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="43" parent="12" name="userNumber">
+      <ColNames>userNumber</ColNames>
+      <UnderlyingIndexName>userNumber</UnderlyingIndexName>
+    </key>
+    <key id="44" parent="12" name="userName">
+      <ColNames>userName</ColNames>
+      <UnderlyingIndexName>userName</UnderlyingIndexName>
+    </key>
+    <key id="45" parent="12" name="phoneNumber">
+      <ColNames>phoneNumber</ColNames>
+      <UnderlyingIndexName>phoneNumber</UnderlyingIndexName>
+    </key>
+    <key id="46" parent="12" name="email">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
